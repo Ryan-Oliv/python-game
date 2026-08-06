@@ -1,10 +1,74 @@
-Fireball Ghost Game 🎮👻
+# 👻 Game Ryan - Python
 
-Fireball Ghost Game é um jogo simples e divertido desenvolvido em Python. No jogo, você controla um fantasma que pode soltar bolas de fogo para derrotar morcegos que aparecem na tela. O objetivo é sobreviver e derrotar o maior número de morcegos possível.
+![Python](https://img.shields.io/badge/Python-000000?style=for-the-badge&logo=python&logoColor=00BFFF)
+![Pygame](https://img.shields.io/badge/Pygame-000000?style=for-the-badge&logo=python&logoColor=00BFFF)
 
-Este projeto é uma excelente introdução ao desenvolvimento de jogos com Python, utilizando bibliotecas como Pygame.
+Jogo de tiro 2D (arcade) feito em Pygame, onde você controla um fantasma que
+precisa sobreviver a ondas de morcegos que aparecem aleatoriamente na tela.
+Atire feitiços para eliminá-los e pontuar — se um morcego encostar no
+fantasma, é game over.
 
-Controle um fantasma que pode se mover para cima, para baixo, para a esquerda e para a direita.
-Dispare bolas de fogo nos morcegos que voam pela tela.
-Morcegos são gerados aleatoriamente e se movem em direção ao fantasma.
-Pontuação baseada no número de morcegos derrotados.Antes de começar, certifique-se de ter o Python instalado em sua máquina. O jogo também utiliza a biblioteca Pygame.
+---
+
+## Como jogar
+
+| Tecla | Ação |
+|---|---|
+| `W` `A` `S` `D` | Mover o fantasma |
+| `SPACE` | Atirar |
+
+- Morcegos aparecem em intervalos aleatórios e se movem pela tela
+- Cada morcego eliminado por um tiro soma um ponto no placar
+- Se um morcego colidir com o fantasma, o jogo termina e aparece a tela de **GAME OVER**
+
+---
+
+## Funcionalidades
+
+- Sistema de pontuação em tempo real
+- Trilha sonora em loop e efeito sonoro de ataque
+- Spawn aleatório de inimigos, com chance controlada a cada ciclo
+- Colisão por máscara de pixels (`collide_mask`), mais precisa que colisão por retângulo
+- Fonte pixelada customizada para placar e tela de game over
+- Ícone e janela personalizados (840x480)
+
+---
+
+## Tecnologias
+
+- **Python**
+- **Pygame** — engine 2D usada para janela, sprites, colisão, áudio e fontes
+
+---
+
+## Estrutura do projeto
+
+```
+python-game/
+├── data/            # imagens, ícone, música e efeitos sonoros
+├── font/            # fonte pixelada (Pixeltype.ttf)
+├── bat.py           # classe do inimigo (morcego)
+├── ghost.py         # classe do personagem principal (fantasma)
+├── shoot.py         # classe do projétil (feitiço)
+├── main.py          # loop principal do jogo
+└── pilares.md       # princípios de design do projeto
+```
+
+---
+
+## Como executar
+
+```bash
+git clone https://github.com/Ryan-Oliv/python-game.git
+cd python-game
+pip install pygame
+python main.py
+```
+
+---
+
+## Créditos
+
+Imagens, ícone, música e efeitos sonoros estão na pasta `data/`. Fonte pixelada
+(`Pixeltype.ttf`) na pasta `font/`.
+
